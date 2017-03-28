@@ -1,0 +1,5 @@
+def kthLargestElement(nums, k):
+
+    numsort = sorted(nums, reverse = True)
+    
+    return numsort[k-1]
