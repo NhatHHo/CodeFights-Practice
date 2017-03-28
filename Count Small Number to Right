@@ -1,0 +1,16 @@
+def countSmallerToTheRight(nums):
+
+    counts = []
+
+    if nums == counts:
+        return counts
+    else:
+        for i in range(0, len(nums)):
+            counter = 0            
+            for j in range(i, len(nums)):
+                if nums[i] > nums[j]:
+                    counter += 1     
+            
+            counts.append(counter)
+            
+    return counts
