@@ -1,0 +1,14 @@
+def sumOfTwo(a, b, v):
+    m = len(a)
+    n = len(b)
+    
+    A = [[a[i] for j in range(n)] for i in range(m)]
+    B = [[b[j] for j in range(n)] for i in range(m)]
+    SUM = [[A[j][i] + B[j][i] for i in range(n)] for j in range(m)]
+    
+    for i in SUM:
+        if v in i:
+            return True
+        
+    return False
+    
