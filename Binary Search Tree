@@ -1,0 +1,32 @@
+def sumOfTwo(a, b, v):
+    a = sorted(a)
+    b = sorted(b)
+    
+    first = int(0)
+    last = int(len(b) - 1)
+    found = False
+    i = int(0)
+        
+    while i <= (len(a) - 1):
+
+        midpoint = int((first + last)/2)
+        if (a[i] + b[midpoint]) == v:
+            found = True
+        else:
+            if (a[i] + b[midpoint]) < v:
+                first = midpoint + 1
+            if (a[i] + b[midpoint]) > v:
+                last = midpoint - 1
+                
+        if first == last:
+            if a[i] + b[first] == v:
+                found = True
+                i = len(a)
+            else:
+                i += 1
+                first = 0
+                last = len(b) - 1
+
+    return found
+    
+
